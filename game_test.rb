@@ -55,4 +55,19 @@ class GameTest < Test::Unit::TestCase
     roll_many(12,10)
     assert_equal(300, @g.score)
   end
+
+  def test_dutch_200
+    roll_spare
+    roll_strike
+    roll_spare
+    roll_strike
+    roll_spare
+    roll_strike
+    roll_spare
+    roll_strike
+    roll_spare
+    roll_strike
+    roll_spare
+    assert_equal(200, @g.score)
+  end
 end
