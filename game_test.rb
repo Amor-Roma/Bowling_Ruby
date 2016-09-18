@@ -12,8 +12,8 @@ class GameTest < Test::Unit::TestCase
     @g.roll(pins)
   end
 
-  def roll_many(times, pins)
-    times.times { @g.roll(pins) }
+  def roll_many(number_of_rolls, pins_per_roll)
+    number_of_rolls.times { @g.roll(pins_per_roll) }
   end
 
   def roll_spare
